@@ -7,11 +7,14 @@
  * @package QOD_Starter_Theme
  */
 
+
+
 if ( ! function_exists( 'qod_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  */
 function qod_setup() {
+	
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
@@ -56,14 +59,31 @@ add_filter( 'stylesheet_uri', 'qod_minified_css', 10, 2 );
  * Enqueue scripts and styles.
  */
 function qod_scripts() {
+	
 	wp_enqueue_style( 'qod-style', get_stylesheet_uri() );
+	wp_enqueue_script('jquery'); // use JS for our API call
+	wp_enqueue_script( 'qod-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array('jquery'), '20130115', true );
 
-	wp_enqueue_script( 'qod-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
+	if (function_exists('rest_url')) {
+		wp_enqueue_script('qod_api', get_template_directory_uri() . '/build/js/api.min.js', array('jquery'), false, true);
+		wp_localize_script('qod_api', 'api_vars', array(
+			'rest_url'=> esc_url_raw(rest_url() ), 
+			'nonce' => wp_create_nonce( 'wp_rest' ),
+			'post_id' => get_the_ID(), 
+			'success' => 'Thanks, your submission was received!',
+			'failure' => 'Your submission could not be processed.'
+			) ); 
+	}
 
 	wp_enqueue_style('font-awesome','https://use.fontawesome.com/releases/v5.0.13/css/all.css');
 
 }
 add_action( 'wp_enqueue_scripts', 'qod_scripts' );
+
+/**
+* Enable WP API parameter filtering.
+*/
+require get_template_directory() . '/inc/api-filter.php';
 
 /**
  * Custom functions that act independently of the theme templates.

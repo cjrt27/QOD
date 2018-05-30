@@ -11,8 +11,33 @@ body{
 body, button, input, select, textarea {
     color: #fff;
     font-family: 'Exo',sans-serif;
-    font-size: 1rem;
+    font-size: 16px;
+    font-weight: 300;
     line-height: 1.5;
+}
+
+button {
+    overflow: visible;
+}
+
+.archive .entry-meta, .blog .entry-meta, .single .entry-meta {
+    margin-bottom: 3rem;
+}
+
+.archive .entry-title, .blog .entry-title, .single .entry-title {
+    display: inline;
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.archive .source, .blog .source, .single .source {
+    font-size: 1.25rem;
+    font-style: italic;
+}
+
+.archive .entry-content p, .blog .entry-content p, .single .entry-content p {
+    font-size: 1.25rem;
 }
 
 * {
@@ -126,6 +151,8 @@ a {
     padding: 0;
 }
 
+
+
 }
 
 @media all and (min-width: 1080px) and (max-width: 9999px){
@@ -196,3 +223,23 @@ a {
 /* Submit a Quote Page */
 
 /* About Page START*/
+
+/* HomePage START*/
+
+.entry-meta{
+    display:flex;
+    flex-direction: row;
+    font-weight:300;
+    align-items:center;
+}
+#new-quote-button {
+    display: block;
+    background-color: #222;
+    border: 2px solid #0c0;
+    border-radius: 3px;
+    color: #0c0;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+    padding: .75rem 2.25rem;
+}

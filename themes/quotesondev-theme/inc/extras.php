@@ -56,3 +56,15 @@ add_action( 'admin_init', 'qod_remove_comments_meta_boxes' );
  }
 
  add_action('pre_get_posts','qod_modify_archives');
+
+ /**
+ * Change the placeholder text in the Add New Post screen.
+ */
+function qod_change_title_here_text( $input ) {
+    global $post_type;
+    if ( is_admin() && 'post' == $post_type ) {
+        return 'Enter first and last name of the quoted person here';
+    }
+    return $input;
+}
+add_filter( 'enter_title_here', 'qod_change_title_here_text' );
