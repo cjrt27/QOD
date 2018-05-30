@@ -2,6 +2,197 @@
 # Page Templates
 --------------------------------------------------------------*/
 
+/* GLOBAL START */
+
+body{
+    background: #222;
+}
+
+body, button, input, select, textarea {
+    color: #fff;
+    font-family: 'Exo',sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+* {
+    outline: none;
+}
+
+*, :after, :before {
+    box-sizing: inherit;
+}
+
+a, a:visited {
+    color: #0c0;
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.hfeed.site{
+    margin: 0 auto;
+    max-width: 1080px;
+    padding: 2.5%;
+    width: 100%;
+}
+
+.site-header {
+    margin-top: 3rem;
+}
+
+.logo img{
+    display: block;
+    width: 300px;
+}
+
+.site-info {
+    margin: 4.5rem 0 3rem;
+}
+
+.blog .entry-content, .page .entry-title {
+    margin-top: 3rem;
+}
+
+.menu {
+    display: flex;
+    flex-direction:row;
+    width:90%;
+    list-style-type: none;
+    justify-content:flex-start;
+    margin: 1rem 0 0;
+    padding: 0;
+}
+
+.menu li {
+    border-right: 1px solid #fff;
+    line-height: 1;
+    padding-left: 0;
+    padding-right: 1rem;
+    left:0;
+}
+
+.menu li:nth-child(2){
+    padding-left:1rem;
+} 
+
+.menu li:nth-child(3){
+    border-right: 0px;
+    padding-left:1rem;
+} 
+
+.main-navigation{
+    display:flex;
+}
+
+.footer-text{
+    margin-top:1rem;
+}
+
+@media all and (min-width: 680px) and (max-width: 1079px){
+   
+.logo img{
+    width: 500px;
+}
+
+.site-info {
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center
+}
+
+.footer-text{
+    margin-top:0;
+
+}
+
+.menu-main-navigation-container{
+    display:flex;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    list-style-type: none;
+    justify-content: flex-start;
+    align-items: center;
+    bottom:0;
+    margin: 1rem 0 0;
+    margin-top:0;
+    padding: 0;
+}
+
+}
+
+@media all and (min-width: 1080px) and (max-width: 9999px){
+
+.site-content {
+    margin: 4.5rem 175px 1.5rem;
+    position: relative;
+}
+
+.menu-main-navigation-container{
+    display:flex;
+    align-items: center;
+}
+
+
+.site-content:before {
+    content:'\f10d';
+    left:-175px;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+.site-content:after {
+    content: '\f10e';
+    right:-175px;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+.site-content:after, 
+.site-content:before {
+    color: #0c0;
+    font-size: 125px;
+    line-height: 125px;
+    position: absolute;
+    top: 0;
+}
+
+.logo img{
+    width: 700px;
+    margin:auto;
+}
+
+.site-info {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: flex-end;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    list-style-type: none;
+    justify-content: flex-start;
+    bottom:0;
+    margin: 1rem 0 0;
+    padding: 0;
+}
+
+
+
+}
+
+/* GLOBAL END */
 /* All Archives Page */
 
 /* Submit a Quote Page */
+
+/* About Page START*/

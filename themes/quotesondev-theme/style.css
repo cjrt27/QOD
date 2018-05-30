@@ -1,9 +1,9 @@
 /*!
-Theme Name: Quotes on Dev Starter Theme
+Theme Name: Quotes on Dev Theme
 Theme URI: http://underscores.me/
-Author: RED Academy
+Author: Cam
 Author URI: http://www.redacademy.com
-Description: A WordPress starter theme for the Quotes on Dev project, forked from Underscores.
+Description: A WordPress theme for the Quotes on Dev project, forked from Underscores.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -221,6 +221,34 @@ th {
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+@font-face {
+  font-family: 'Exo';
+  src: url("../../fonts/Exo-MediumItalic.eot");
+  src: url("../../fonts/Exo-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../../fonts/Exo-MediumItalic.woff2") format("woff2"), url("../../fonts/Exo-MediumItalic.woff") format("woff"), url("../../fonts/Exo-MediumItalic.ttf") format("truetype"), url("../../fonts/Exo-MediumItalic.svg#../../fonts/Exo-MediumItalic") format("svg");
+  font-weight: 500;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Exo';
+  src: url("../../fonts/Exo-Light.eot");
+  src: url("../../fonts/Exo-Light.eot?#iefix") format("embedded-opentype"), url("../../fonts/Exo-Light.woff2") format("woff2"), url("../../fonts/Exo-Light.woff") format("woff"), url("../../fonts/Exo-Light.ttf") format("truetype"), url("../../fonts/Exo-Light.svg#../../fonts/Exo-Light") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Exo';
+  src: url("../../fonts/Exo-LightItalic.eot");
+  src: url("../../fonts/Exo-LightItalic.eot?#iefix") format("embedded-opentype"), url("../../fonts/Exo-LightItalic.woff2") format("woff2"), url("../../fonts/Exo-LightItalic.woff") format("woff"), url("../../fonts/Exo-LightItalic.ttf") format("truetype"), url("../../fonts/Exo-LightItalic.svg#../../fonts/Exo-LightItalic") format("svg");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Exo';
+  src: url("../../fonts/Exo-Medium.eot");
+  src: url("../../fonts/Exo-Medium.eot?#iefix") format("embedded-opentype"), url("../../fonts/Exo-Medium.woff2") format("woff2"), url("../../fonts/Exo-Medium.woff") format("woff"), url("../../fonts/Exo-Medium.ttf") format("truetype"), url("../../fonts/Exo-Medium.svg#../../fonts/Exo-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal; }
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -237,6 +265,10 @@ textarea {
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   clear: both; }
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0; }
 
 /* Copy */
 p {
@@ -275,6 +307,20 @@ mark, ins {
 
 big {
   font-size: 125%; }
+
+* {
+  outline: none; }
+
+*, :after, :before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+a, a:visited {
+  color: #0c0; }
+
+a {
+  text-decoration: none;
+  background-color: transparent; }
 
 /*--------------------------------------------------------------
 # Elements
@@ -587,5 +633,187 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
+/* GLOBAL START */
+body {
+  background: #222; }
+
+body, button, input, select, textarea {
+  color: #fff;
+  font-family: 'Exo',sans-serif;
+  font-size: 1rem;
+  line-height: 1.5; }
+
+* {
+  outline: none; }
+
+*, :after, :before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+a, a:visited {
+  color: #0c0; }
+
+a {
+  text-decoration: none;
+  background-color: transparent; }
+
+.hfeed.site {
+  margin: 0 auto;
+  max-width: 1080px;
+  padding: 2.5%;
+  width: 100%; }
+
+.site-header {
+  margin-top: 3rem; }
+
+.logo img {
+  display: block;
+  width: 300px; }
+
+.site-info {
+  margin: 4.5rem 0 3rem; }
+
+.blog .entry-content, .page .entry-title {
+  margin-top: 3rem; }
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 90%;
+  list-style-type: none;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 1rem 0 0;
+  padding: 0; }
+
+.menu li {
+  border-right: 1px solid #fff;
+  line-height: 1;
+  padding-left: 0;
+  padding-right: 1rem;
+  left: 0; }
+
+.menu li:nth-child(2) {
+  padding-left: 1rem; }
+
+.menu li:nth-child(3) {
+  border-right: 0px;
+  padding-left: 1rem; }
+
+.main-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.footer-text {
+  margin-top: 1rem; }
+
+@media all and (min-width: 680px) and (max-width: 1079px) {
+  .logo img {
+    width: 500px; }
+  .site-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .footer-text {
+    margin-top: 0; }
+  .menu-main-navigation-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    list-style-type: none;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    bottom: 0;
+    margin: 1rem 0 0;
+    margin-top: 0;
+    padding: 0; } }
+
+@media all and (min-width: 1080px) and (max-width: 9999px) {
+  .site-content {
+    margin: 4.5rem 175px 1.5rem;
+    position: relative; }
+  .menu-main-navigation-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .site-content:before {
+    content: '\f10d';
+    left: -175px;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900; }
+  .site-content:after {
+    content: '\f10e';
+    right: -175px;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900; }
+  .site-content:after,
+  .site-content:before {
+    color: #0c0;
+    font-size: 125px;
+    line-height: 125px;
+    position: absolute;
+    top: 0; }
+  .logo img {
+    width: 700px;
+    margin: auto; }
+  .site-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    list-style-type: none;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    bottom: 0;
+    margin: 1rem 0 0;
+    padding: 0; } }
+
+/* GLOBAL END */
 /* All Archives Page */
 /* Submit a Quote Page */
+/* About Page START*/

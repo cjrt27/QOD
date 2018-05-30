@@ -59,6 +59,9 @@ function qod_scripts() {
 	wp_enqueue_style( 'qod-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'qod-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
+
+	wp_enqueue_style('font-awesome','https://use.fontawesome.com/releases/v5.0.13/css/all.css');
+
 }
 add_action( 'wp_enqueue_scripts', 'qod_scripts' );
 
@@ -81,3 +84,13 @@ require get_template_directory() . '/inc/metaboxes.php';
  * Custom WP API modifications.
  */
 require get_template_directory() . '/inc/api.php';
+
+/* Below is so that Wordpress will accept SVGs*/
+
+function cc_mime_types($mimes) {
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+  }
+  add_filter('upload_mimes', 'cc_mime_types');
+  
+
