@@ -34,7 +34,7 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 		<?php endif; ?>
-
+		<?php qod_numbered_pagination()?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

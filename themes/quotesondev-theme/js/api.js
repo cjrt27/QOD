@@ -19,9 +19,9 @@ console.log(data);
 // update the quote content and name of person
 
 var newContent=data[0].content.rendered;
-var newTitle=data[0].title.rendered;
-var newSource =data[0]._qod_quote_source
-var newSourceURL =data[0]._qod_quote_source;
+var newTitle='- ' + data[0].title.rendered;
+var newSource ='<span class="newSourceComma">' + ' , '+'</span>' + data[0]._qod_quote_source
+var newSourceURL =data[0]._qod_quote_source_url;
 
 $('.entry-content p').empty();
 $('.entry-content p').append(newContent);
