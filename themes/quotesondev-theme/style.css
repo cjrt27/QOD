@@ -985,7 +985,8 @@ a {
     border: 1px solid #0c0;
     width: 50%;
     margin-top: 1rem;
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    color: white; }
   .quote-submission-wrapper .author {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -999,7 +1000,8 @@ a {
     border: 1px solid #0c0;
     width: 90%;
     margin-top: 1rem;
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    color: white; }
   .quote-submission-wrapper .quote {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1013,7 +1015,8 @@ a {
     border: 1px solid #0c0;
     width: 50%;
     margin-top: 1rem;
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    color: white; }
   .quote-submission-wrapper .quote-source {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1027,7 +1030,8 @@ a {
     border: 1px solid #0c0;
     width: 50%;
     margin-top: .75rem;
-    margin-bottom: .75rem; }
+    margin-bottom: .75rem;
+    color: white; }
   .quote-submission-wrapper .quote-source-url {
     display: -webkit-box;
     display: -ms-flexbox;
