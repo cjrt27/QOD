@@ -68,6 +68,7 @@ function qod_scripts() {
 		wp_enqueue_script('qod_api', get_template_directory_uri() . '/build/js/api.min.js', array('jquery'), false, true);
 		wp_localize_script('qod_api', 'api_vars', array(
 			'rest_url'=> esc_url_raw(rest_url() ), 
+			'home_url'=>esc_url_raw(home_url() ),
 			'nonce' => wp_create_nonce( 'wp_rest' ),
 			'post_id' => get_the_ID(), 
 			'success' => 'Thanks, your submission was received!',

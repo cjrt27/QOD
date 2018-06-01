@@ -9,6 +9,7 @@
     // Place code for random fetching in here (FETCHING DATA)
         $('#new-quote-button').on('click',function(event){
             event.preventDefault();
+            var prevPage= window.location.href;
     $.ajax({
         method: 'GET',
         url: api_vars.rest_url + 'wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1'
@@ -39,15 +40,18 @@ else if(data[0]._qod_quote_source ) {
 
 else {$('.source').empty();}
 
-history.pushState(null,null,data[0].slug)
+var url=api_vars.home_url +'/' + data[0].slug;
+history.pushState(null,null,url)
 
 
-window.on('popstate', function(event) {
-    event.preventDefault();
-    
-  });
+$(window).on('popstate', function() {
+    window.location.replace(prevPage)    
 
-  var prevPage= history.go(-1);
+
+});
+
+
+
 
   
 
